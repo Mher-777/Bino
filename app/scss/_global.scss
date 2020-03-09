@@ -41,6 +41,8 @@ img {
 
 body {
   font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
   //   font-family: 'Lato', sans-serif;
   // font-family: 'Open Sans', sans-serif;
   // font-family: 'Source Sans Pro', sans-serif;
@@ -49,4 +51,9 @@ body {
 .slick-slide,
 .slick-slide * {
   outline: none !important;
+}
+.container{
+  max-width: 1190px;
+  padding: 0 10px;
+  margin: 0 auto;
 }

@@ -1,4 +1,77 @@
-@import 'global';
-@import 'vars';
-@import 'fonts';
-@import 'animation';
+@import "global";
+@import "vars";
+@import "fonts";
+@import "animation";
+
+.header {
+  top: 40px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    min-height: 95px;
+    align-items: center;
+    &::after {
+      content: "";
+      min-height: inherit;
+      font-size: 0;
+    }
+  }
+  &__logo {
+    margin-right: 10px;
+    &-link {
+      max-width: 300px;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  &-item {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 20px;
+    transition: 0.3s all;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #e74c3c;
+      height: 1px;
+      transition: .3s all; 
+    }
+    &.current {
+      &::before {
+        width: 100%;
+      }
+      .header__menu-link {
+        color: #e74c3c;
+      }
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+      .header__menu-link {
+        color: #e74c3c;
+      }
+    }
+    & + & {
+      margin-left: 50px;
+    }
+  }
+  &-link {
+    color: #f4f5f9;
+    transition: 0.3s all;
+  }
+}
