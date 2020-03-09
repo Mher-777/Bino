@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+span {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+form,
+input,
+button,
+select,
+option {
+  outline: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-size: 14px;
+  //   font-family: 'Lato', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  // font-family: 'Source Sans Pro', sans-serif;
+}
+
+.slick-slide,
+.slick-slide * {
+  outline: none !important;
+}
