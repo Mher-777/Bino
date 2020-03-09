@@ -4,15 +4,26 @@
 @import "animation";
 
 .header {
-  top: 40px;
   left: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
+  z-index: 100;
+  background-color: transparent;
+  transition: 0.4s all;
+  &.--sticky {
+    top: 0;
+    background-color: rgba(34, 61, 97, 0.64);
+    position: fixed;
+    .header__inner{
+        min-height: 70px;
+    }
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
     min-height: 95px;
     align-items: center;
+    transition: 0.4s all;
     &::after {
       content: "";
       min-height: inherit;
@@ -48,7 +59,7 @@
       transform: translateX(-50%);
       background-color: #e74c3c;
       height: 1px;
-      transition: .3s all; 
+      transition: 0.3s all;
     }
     &.current {
       &::before {
@@ -63,7 +74,7 @@
         width: 100%;
       }
       .header__menu-link {
-        color: #e74c3c;
+        color: $color-red;
       }
     }
     & + & {
@@ -73,5 +84,168 @@
   &-link {
     color: #f4f5f9;
     transition: 0.3s all;
+  }
+}
+.main-screen {
+  position: relative;
+  &__bg {
+    min-height: 990px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  &__content {
+    position: absolute;
+    max-width: 800px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 320px;
+    color: $color-white;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    margin-bottom: 45px;
+  }
+  &__title {
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 7.2px;
+    position: relative;
+    padding-bottom: 45px;
+    margin-bottom: 45px;
+    &-line {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $color-red;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      background-color: #f1ebe7;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: 80px;
+      display: block;
+    }
+    &::after {
+      margin-left: -60px;
+    }
+    &::before {
+      margin-left: 60px;
+    }
+  }
+  &__text {
+    max-width: 600px;
+    color: #cbc6c0;
+    line-height: 24px;
+    display: inline-block;
+    margin-bottom: 65px;
+  }
+  &__arrow {
+    width: 45px;
+    height: 45px;
+    background-color: #706a65;
+    border: none;
+    position: absolute;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s all;
+    color: #3d3530;
+    &::before {
+      @include icon-center;
+    }
+    &:hover {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+    &.arrow-left {
+      left: 0;
+      &::before {
+        content: "\f104";
+        @include icomoon;
+      }
+      margin-left: 50px;
+    }
+    &.arrow-right {
+      right: 0;
+      margin-right: 50px;
+      &::before {
+        content: "\f105";
+        @include icomoon;
+      }
+    }
+  }
+  &__down {
+    width: 64px;
+    height: 64px;
+    background-color: #f4f5f9;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -32px;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+    animation: pulse 1.5s infinite;
+    &::before {
+      content: "";
+      @include icon-center;
+      position: absolute;
+      background-image: url(../images/icons/icon-down.svg);
+      width: 22px;
+      height: 31px;
+    }
+    &:hover {
+      animation: none;
+    }
+  }
+}
+.main-screen__btns {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  &-btn {
+    margin-right: 30px;
+    color: #fff;
+    padding: 19px 15px;
+    width: 225px;
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+    background-color: $color-red;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12px;
+    border-radius: 3px;
+    transition: 0.3s all;
+    border: 1px solid transparent;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $color-red;
+      color: $color-red;
+    }
+    &:last-child {
+      margin-right: 0;
+      background-color: transparent;
+      border: 1px solid #fff;
+      &:hover {
+        border: 1px solid $color-red;
+      }
+    }
   }
 }
