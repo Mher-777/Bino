@@ -11,6 +11,20 @@ $(function () {
         nextArrow: '<button class="main-screen__arrow arrow-right"></button>',
     });
 
+    $('.services__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        speed: 600,
+        vertical: true,
+        verticalSwiping: true,
+        appendDots: '.services__slider-dots',
+        infinite: false,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        cssEase: 'linear',
+    })
 
 
     let WindowHeight = jQuery(window).height();
