@@ -509,7 +509,7 @@
 
   &:before,
   &:after {
-    content: '';
+    content: "";
     display: block;
   }
 }
@@ -795,6 +795,11 @@
     min-height: 511px;
     align-items: center;
     position: relative;
+    &::after {
+      content: "";
+      min-height: inherit;
+      font-size: 0;
+    }
   }
   &__col {
     width: 20%;
@@ -828,8 +833,111 @@
     }
   }
 }
-.statistics__col-number[data-after="K"]{
-  &::after{
-    content: 'K';
+.statistics__col-number[data-after="K"] {
+  &::after {
+    content: "K";
+  }
+}
+.pricing {
+  padding: 150px 0 140px;
+  &__top {
+    margin-bottom: 65px;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__description {
+    color: #999;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__col {
+    max-width: 380px;
+    width: 100%;
+    margin-right: 15px;
+    text-align: center;
+    transition: .3s all;
+    &:hover{
+      box-shadow: 0px 1px 10px 1px #ccc;
+    }
+    &.premium{
+      .pricing__col-top{
+        background-color: $color-red;
+      }
+      .pricing__col-number strong{
+        color: $color-red;
+      }
+      .pricing__col-btn{
+        background-color: $color-red;
+      }
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    &-top {
+      width: 100%;
+      height: 205px;
+      background-color: #999;
+      padding-top: 50px;
+    }
+    &-title {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 45px;
+    }
+    &-number {
+      width: 154px;
+      height: 153px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+      flex-direction: column;
+      color: #999;
+      font-family: "Source Sans Pro", sans-serif;
+      animation: pulse-pricing 1.5s infinite linear;
+      strong {
+        font-size: 40px;
+        font-weight: 700;
+      }
+      span {
+        font-size: 13px;
+      }
+    }
+    &-box {
+      background-color: #f4f5f9;
+      padding-top: 95px;
+      padding-bottom: 50px;
+    }
+    &-item {
+      margin-top: 25px;
+      display: block;
+      color: #999;
+      font-weight: 500;
+    }
+    &-btn {
+      padding: 18px 30px;
+      margin-top: 45px;
+      box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+      background-color: #999;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14px;
+      
+    }
   }
 }
