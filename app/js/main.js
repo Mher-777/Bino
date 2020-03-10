@@ -5,6 +5,7 @@ $(function () {
         fade: true,
         speed: 400,
         rows: 0,
+        autoplay: true,
         cssEase: 'linear',
         prevArrow: '<button class="main-screen__arrow arrow-left"></button>',
         nextArrow: '<button class="main-screen__arrow arrow-right"></button>',
