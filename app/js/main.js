@@ -25,7 +25,16 @@ $(function () {
         autoplaySpeed: 1500,
         cssEase: 'linear',
     })
-
+    $('.case-study__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        dotsClass: 'case-study__dots',
+        autoplay: true,
+        cssEase: 'linear',
+        autoplaySpeed: 1500,
+    })
 
     let WindowHeight = jQuery(window).height();
     let load_element = 0;

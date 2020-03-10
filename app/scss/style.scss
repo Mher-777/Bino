@@ -551,7 +551,7 @@
   }
 }
 .works {
-  padding: 140px 0;
+  padding: 140px 0 0;
   &__top {
     margin-bottom: 50px;
     text-align: center;
@@ -575,7 +575,7 @@
       transition: 0.3s all;
       text-transform: uppercase;
       font-weight: 500;
-      &.mixitup-control-active{
+      &.mixitup-control-active {
         color: $color-red;
       }
       & + & {
@@ -593,12 +593,11 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    min-height: 960px;
+    align-items: flex-start;
   }
   &__col {
     width: 25%;
     position: relative;
-    height: auto;
     max-height: 480px;
     &:hover {
       .works__col-box {
@@ -607,7 +606,7 @@
     }
     img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
     }
     &-box {
@@ -649,5 +648,122 @@
     &-subtitle {
       letter-spacing: 0.7px;
     }
+  }
+}
+.case-study {
+  padding-top: 150px;
+  padding-bottom: 15px;
+  background-color: #f4f5f9;
+  &__top {
+    margin-bottom: 65px;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__description {
+    color: #999;
+    position: relative;
+    padding-bottom: 35px;
+  }
+  &__content {
+  
+    padding: 100px 53px 50px 53px;
+    text-align: center;
+  }
+  &__bg {
+    min-height: 722px;
+    max-width: 585px;
+    width: 100%;
+  }
+  &__inner {
+    display: flex;
+  }
+}
+.case-study__slider {
+  margin-right: -80px;
+  margin-top: 45px;
+  max-width: 665px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  height: 100%;
+  &-icon {
+    width: 90px;
+    height: 90px;
+    background-color: $color-red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    margin: 0 auto 65px;
+    img {
+      transform: rotate(-45deg);
+    }
+  }
+  &-title {
+    color: $color-gray;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.35px;
+    position: relative;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 41px;
+      height: 2px;
+      background-color: $color-gray;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &-text {
+    color: #999;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1.05px;
+    margin-bottom: 40px;
+  }
+  &-btn {
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+    background-color: $color-red;
+    padding: 16px 37px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14px;
+    border-radius: 3px;
+    margin-bottom: 50px;
+  }
+}
+.case-study__dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0;
+  li {
+    width: 12px;
+    height: 12px;
+    background-color: #f4f5f9;
+    border-radius: 50%;
+    & + li{
+      margin-left: 8px;
+      cursor: pointer;
+    }
+    &.slick-active{
+      background-color: $color-red;
+    }
+  }
+  button{
+    border: none;
   }
 }
