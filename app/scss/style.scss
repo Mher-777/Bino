@@ -561,8 +561,8 @@
 .works {
   padding: 140px 0 0;
   &__top {
-    margin-bottom: 50px;
     text-align: center;
+    margin-bottom: 50px;
     &-title {
       margin-bottom: 20px;
     }
@@ -663,8 +663,10 @@
   padding-bottom: 150px;
   background-color: #f4f5f9;
   &__top {
+    margin: 0 auto;
     margin-bottom: 65px;
     text-align: center;
+    max-width: 690px;
   }
   &__title {
     margin-bottom: 20px;
@@ -841,8 +843,10 @@
 .pricing {
   padding: 150px 0 140px;
   &__top {
-    margin-bottom: 65px;
     text-align: center;
+    max-width: 690px;
+    margin: 0 auto;
+    margin-bottom: 65px;
   }
   &__title {
     margin-bottom: 20px;
@@ -1005,7 +1009,7 @@
     }
     .team__col-box {
       transform: scale(1.4);
-      &::before{
+      &::before {
         transform: scale(1);
       }
     }
@@ -1085,5 +1089,49 @@
   }
   &:nth-child(5) {
     margin-top: -85px;
+  }
+}
+.clients {
+  padding: 140px 0;
+  background-color: #f4f5f9;
+  border-bottom: 1px solid #d8d9db;
+  &__top {
+    text-align: center;
+    max-width: 690px;
+    margin: 0 auto 65px;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__description {
+    color: #999;
+    line-height: 21px;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  &__row {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__col {
+    max-width: 210px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(31, 31, 31, 0.09);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    max-height: 100px;
+    overflow: hidden;
+    transition: .3s all;
+    img{
+      max-width: 100%;
+      object-fit: cover;
+    }
   }
 }
