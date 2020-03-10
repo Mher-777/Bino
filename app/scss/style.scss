@@ -369,11 +369,6 @@
     max-width: 585px;
     width: 100%;
     &-title {
-      color: $color-gray;
-      font-size: 36px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 3.6px;
       padding-left: 35px;
       position: relative;
       margin-bottom: 50px;
@@ -453,7 +448,7 @@
     letter-spacing: 3.6px;
     padding-right: 35px;
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     &::before {
       content: "";
       position: absolute;
@@ -507,7 +502,7 @@
   flex-direction: column;
   left: 0;
   justify-content: space-evenly;
-  top: 200px;
+  top: 175px;
   margin-left: -32px;
 }
 .services__bg-icon {
@@ -553,5 +548,106 @@
     width: 1px;
     background-color: rgba(#999, 0.25);
     cursor: pointer;
+  }
+}
+.works {
+  padding: 140px 0;
+  &__top {
+    margin-bottom: 50px;
+    text-align: center;
+    &-title {
+      margin-bottom: 20px;
+    }
+    &-description {
+      color: #999;
+      line-height: 14px;
+      padding-bottom: 35px;
+      position: relative;
+    }
+  }
+  &__filters {
+    margin-top: 70px;
+    &-btn {
+      background-color: transparent;
+      color: $color-gray;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s all;
+      text-transform: uppercase;
+      font-weight: 500;
+      &.mixitup-control-active{
+        color: $color-red;
+      }
+      & + & {
+        padding-left: 20px;
+        &:before {
+          content: "/";
+          margin-right: 20px;
+        }
+      }
+      &:hover {
+        color: $color-red;
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 960px;
+  }
+  &__col {
+    width: 25%;
+    position: relative;
+    height: auto;
+    max-height: 480px;
+    &:hover {
+      .works__col-box {
+        transform: scale(1);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-red, 0.8);
+      color: #fff;
+      transform: scale(0);
+      transition: 0.3s linear;
+    }
+    &-info {
+      position: absolute;
+      bottom: 50px;
+      left: 50px;
+    }
+    &-name {
+      display: block;
+      margin-bottom: 20px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      position: relative;
+      padding-top: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 44px;
+        height: 4px;
+        background-color: #fff;
+      }
+    }
+    &-subtitle {
+      letter-spacing: 0.7px;
+    }
   }
 }

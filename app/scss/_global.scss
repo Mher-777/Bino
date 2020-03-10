@@ -41,7 +41,7 @@ img {
 
 body {
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   position: relative;
   //   font-family: 'Lato', sans-serif;
   // font-family: 'Open Sans', sans-serif;
@@ -52,12 +52,47 @@ body {
 .slick-slide * {
   outline: none !important;
 }
-.container{
+.container {
   max-width: 1190px;
   padding: 0 10px;
   margin: 0 auto;
 }
-.wrapper{
+.wrapper {
   max-width: 1920px;
   margin: 0 auto;
+}
+.title {
+  color: #6a6a6a;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+.ellipse {
+  width: 8px;
+  height: 8px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  &::before,&::after{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background-color: #999;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &::before{
+    left: 0;
+    margin-left: 24px;
+  }
+  &::after{
+    right: 0;
+    margin-right: 24px;
+  }
 }

@@ -46,6 +46,6 @@ $(function () {
         } else {
             jQuery('.header').removeClass("--sticky");
         }
-
     });
+    var mixer = mixitup('.works');
 })
