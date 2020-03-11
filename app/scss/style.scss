@@ -1137,7 +1137,6 @@
 }
 .blog {
   padding-top: 120px;
-  margin-bottom: 150px;
   &__top {
     text-align: center;
     max-width: 690px;
@@ -1153,9 +1152,6 @@
     position: relative;
     padding-bottom: 30px;
   }
-  &__inner {
-  }
-
   &__row {
     display: flex;
   }
@@ -1266,5 +1262,110 @@
       border-width: 35px 0 35px 28px;
       border-color: transparent transparent transparent $color-red;
     }
+  }
+}
+.contact {
+  background-color: #f4f5f9;
+  padding: 150px 0;
+  &__top {
+    text-align: center;
+    max-width: 690px;
+    margin: 0 auto 65px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    position: relative;
+    padding-bottom: 30px;
+    color: #999;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 478px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 100%;
+    margin-right: 30px;
+    padding: 90px 120px 25px 90px;
+  }
+
+  &__content-title {
+    color: $color-red;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+  }
+
+  &__content-list {
+    margin-bottom: 60px;
+  }
+
+  &__content-item {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__content-link {
+    color: #999;
+  }
+
+  &__form {
+    max-width: 665px;
+    width: 100%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  &__form-box {
+    padding: 100px;
+  }
+
+  &__form-input {
+    border: none;
+    display: block;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(#999, 0.25);
+    background-color: transparent;
+    margin-bottom: 30px;
+    width: 100%;
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  &__form-textarea {
+    border: none;
+    display: block;
+    height: 110px;
+    width: 100%;
+    resize: none;
+    border-bottom: 1px solid rgba(#999, 0.25);
+    margin-bottom: 30px;
+    outline: none;
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  &__form-btn {
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+    background-color: $color-red;
+    padding: 14px 25px;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
   }
 }
