@@ -21,3 +21,10 @@
     box-shadow: 0 0 0 0 rgba(#f4f5f9, 0);
   }
 }
+
+@mixin anim-fadeInLeft {
+  animation-name: fadeInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
