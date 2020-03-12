@@ -7,8 +7,8 @@ $(function () {
         rows: 0,
         autoplay: true,
         cssEase: 'linear',
-        prevArrow: '<button class="main-screen__arrow arrow-left"></button>',
-        nextArrow: '<button class="main-screen__arrow arrow-right"></button>',
+        prevArrow: '<button class="main-screen__arrow arrow-left animated fadeInLeft"></button>',
+        nextArrow: '<button class="main-screen__arrow arrow-right animated fadeInRight"></button>',
         responsive: [
             {
                 breakpoint: 1000,
@@ -30,15 +30,17 @@ $(function () {
         appendDots: '.services__slider-dots',
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 3000,
         cssEase: 'linear',
+        swipe: false,
+        draggable: false,
+        touchMove: true,
         responsive: [
             {
                 breakpoint: 700,
                 settings: {
                     dots: false,
-                    swipe: false,
-                    draggable: false
+                    
                 }
             },
         ]
@@ -187,5 +189,26 @@ $(function () {
         }
     });
 
+    $.fn.scrollToTop = function () {
+        $(this).hide().removeAttr("href");
+        if ($(window).scrollTop() != "0") {
+            $(this).fadeIn("slow")
+        }
+        var scrollDiv = $(this);
+        $(window).scroll(function () {
+            if ($(window).scrollTop() == "0") {
+                $(scrollDiv).fadeOut("slow")
+            } else {
+                $(scrollDiv).fadeIn("slow")
+            }
+        });
+        $(this).click(function () {
+            $("html, body").animate({ scrollTop: 0 }, "slow")
+        })
+    };
+    $(function () { $("#toTop").scrollToTop(); });
+
+    new WOW().init();
+    
     var mixer = mixitup('.works');
 })
