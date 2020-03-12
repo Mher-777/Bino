@@ -5,7 +5,7 @@ $(function () {
         fade: true,
         speed: 400,
         rows: 0,
-        // autoplay: true,
+        autoplay: true,
         cssEase: 'linear',
         prevArrow: '<button class="main-screen__arrow arrow-left"></button>',
         nextArrow: '<button class="main-screen__arrow arrow-right"></button>',
@@ -28,10 +28,20 @@ $(function () {
         vertical: true,
         verticalSwiping: true,
         appendDots: '.services__slider-dots',
-        infinite: false,
+        infinite: true,
         autoplay: true,
         autoplaySpeed: 1500,
         cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 700,
+                settings: {
+                    dots: false,
+                    swipe: false,
+                    draggable: false
+                }
+            },
+        ]
     })
     $('.case-study__slider').slick({
         slidesToShow: 1,
@@ -144,28 +154,38 @@ $(function () {
 
     $(".menu__item07").click(function (event) {
         $('html, body').animate({
-            scrollTop: $("#blog").offset().top
+            scrollTop: $(".blog").offset().top
         }, 1000);
         event.preventDefault()
     });
 
     $(".menu__item08").click(function (event) {
         $('html, body').animate({
-            scrollTop: $("#contact").offset().top
+            scrollTop: $(".contact").offset().top
         }, 1000);
         event.preventDefault()
     });
 
     let elm = document.querySelector('.header');
-    let ms = new MenuSpy(elm,{
+    let ms = new MenuSpy(elm, {
         activeClass: 'current',
-        
+
     });
 
-    $('.header__hamburger').on('click', function () { 
+    $('.header__hamburger').on('click', function () {
         $('.header__menu').slideToggle()
         $(this).toggleClass('active')
-     });
-    
+    });
+
+    $(".works__filters").mCustomScrollbar({
+        axis: "x",
+        theme: "dark",
+        autoHideScrollbar: true,
+        mouseWheel: true,
+        mouseWheel: {
+            scrollAmount: 'auto'
+        }
+    });
+
     var mixer = mixitup('.works');
 })
