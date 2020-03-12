@@ -9,7 +9,6 @@
   font-style: normal;
   font-display: block;
 }
-
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -25,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-feed:before {
+  content: "\f09e";
+}
+.icon-rss:before {
+  content: "\f09e";
+}
+.icon-linkedin:before {
+  content: "\f0e1";
+}
 .icon-angle-double-right:before {
   content: "\f101";
 }
@@ -36,4 +50,13 @@
 }
 .icon-angle-up:before {
   content: "\f106";
+}
+.icon-tumblr:before {
+  content: "\f173";
+}
+.icon-skype:before {
+  content: "\f17e";
+}
+.icon-vimeo:before {
+  content: "\f27d";
 }

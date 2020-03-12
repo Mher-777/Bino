@@ -28,3 +28,39 @@
   animation-fill-mode: both;
   animation-iteration-count: infinite;
 }
+.header__hamburger {
+  width: 44px;
+  &-line {
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 8px auto;
+  }
+  &.active{
+    .header__hamburger-line {
+      margin-bottom: 0;
+    }
+    .line-2 {
+      opacity: 0;
+    }
+    .line-1 {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .line-3 {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+  &:hover {
+    .header__hamburger-line {
+      margin-bottom: 0;
+    }
+    .line-2 {
+      opacity: 0;
+    }
+    .line-1 {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .line-3 {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+}
